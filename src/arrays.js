@@ -12,13 +12,13 @@
 //     }
 //     return newArr //Return newArr data
 // }    
-// console.log(redundentData([1, 1, 2, 3, 4, 5]))
+// console.log(redundentData([[1, 1, 2, 3, 4, 5]]))
 //TODO - Develop a function that counts number (0)'s in 2D array
 //NOTE - twoArrays([0,0],[0,1]) -> 3
 
-// function twoArrays(arr) {
+// function twoArrays(arr) { // count 2d array
 //     let count = 0;
-//     for(let i = 0; i < arr.length; i++) {
+//     for(let i = 0; i < arr.length; i++) { //for loop
 //         for(let j = 0; j < arr[i].length; j++){
 //             if(arr[i][j] === 0) {
 //                 count++
@@ -30,3 +30,19 @@
 
 // console.log(twoArrays([[0,0],[0,1]]))
 
+//TODO - Write a function that returns the largest even number in an array
+//NOTE - largeReturns([1,10,17) -> 10
+//NOTE - largeReturns([1,3,5,7,9) -> "No even number"
+function largeReturns(arr) {
+   let benchmark = -1;
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 === 0)
+            if(arr[i] > benchmark) {
+                benchmark = arr[i]
+                }
+            } 
+        return benchmark === -1 ? "No even number": benchmark
+    }
+
+console.log(largeReturns([1,9,17]))
